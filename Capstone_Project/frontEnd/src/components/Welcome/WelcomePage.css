@@ -1,0 +1,28 @@
+
+.totalPage
+{
+    display: flex;
+}
+.welcome
+{
+    width: 1600px;
+}
+.nav{
+    width:80px;
+    height: 1100px;
+    background-color: rgb(237, 229, 229);
+    border-right:1px solid black;
+    position: fixed;
+ }
+ .logo
+ {
+     margin-top: 20px;
+     width: 80px;
+     height: 80px;
+ }
+ .livebook
+ {
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+ }
