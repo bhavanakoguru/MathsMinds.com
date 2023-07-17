@@ -4,26 +4,17 @@ import {Link} from "react-router-dom";
 
 function DisplayHome()
 {
-
-    const [start,setStart] = useState(false);
-
-    // function go()
-    // {
-    //     setStart(!start);
-    //     {
-    //         if(start)
-    //         {
-                
-    //         }
-    //     }
-    // }
-
     const [course,setCourse]=useState([]);
     const [isClick, setIsClick] = useState(false);
+    const [subunits,setSubunits] = useState([]);
+    const [isClicked,setIsClicked] = useState([]);
+    const [units,setUnits] = useState([]);
+    const [isClickMe,setIsClickMe] = useState([]);
 
     function click()
     {
         setIsClick(!isClick);
+        // eslint-disable-next-line no-lone-blocks
         {
             if(isClick)
             {
@@ -36,13 +27,10 @@ function DisplayHome()
             }
         }
     }
-
-    const [units,setUnits] = useState([]);
-    const [isClickMe,setIsClickMe] = useState([]);
-
     function clickMe()
     {
         setIsClickMe(!isClickMe)
+        // eslint-disable-next-line no-lone-blocks
         {
             if(isClickMe)
             {
@@ -55,9 +43,6 @@ function DisplayHome()
             }
         }
     }
-
-    const [subunits,setSubunits] = useState([]);
-    const [isClicked,setIsClicked] = useState([]);
     function ClickMeOnce() {
         setIsClicked(!isClicked);
         if(isClicked){
@@ -69,17 +54,6 @@ function DisplayHome()
                 })
         }
     }
-    // function Click() {
-    //     setIsClicked(!isClicked);
-    //     if(isClicked){
-    //         fetch(`http://localhost:5050/Units`)
-    //             .then(response => response.json())
-    //             .then(subunitdata => {
-    //                 console.log(subunitdata)
-    //                 setSubunits(subunitdata)
-    //             })
-    //     }
-    // }
     return(<>
         <div className="totalPage">
             <div className="nav">
@@ -99,8 +73,8 @@ function DisplayHome()
                         </div>
                 </div>
                 start?{
-                    <div className="container2">
-                    <div className="container2flex">
+                    <div className="containerStore">
+                    <div className="containerData">
                             <div className="center">
                                     {
                                         isClick ? 
@@ -111,7 +85,6 @@ function DisplayHome()
                                                 </h3>
                                         </div>)
                                         :""
-                                        //  <><img src="/resources/miccymouse.svg" alt="mouse" className="mouse"/><h1 className="mouse1">WELCOME</h1></>
                                     }
                             </div>
                     <div className="unitshow">

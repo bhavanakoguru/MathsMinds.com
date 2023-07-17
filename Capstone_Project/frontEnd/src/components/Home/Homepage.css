@@ -2,8 +2,9 @@
 {
     display: flex;
 }
-/************/
-.nav{
+/*NAV*/
+.nav
+{
     width:80px;
     height: 1100px;
     background-color: rgb(237, 229, 229);
@@ -28,15 +29,11 @@
     height: 80px;
     margin-top: 350px;
  }
-
- /**************/
-
+/*BanerPage*/
  .container
  {
     width: 100%;
  }
-
- /*****************/
  .introduction
  {
     border: 1px solid black;
@@ -72,7 +69,6 @@
    display: block;
    margin-left: 700px;
    margin-right: auto;
-   /* margin-top: 200px; */
 }
 .courseinfo
 {
@@ -94,11 +90,11 @@
    border: 1px solid black;
    width: 350px;
 }
-.container2
+.containerStore
 {
    width: 100%;
 }
-.container2flex
+.containerData
 {
    display: flex;
 }
@@ -181,9 +177,6 @@
 {
     font-weight: 500;
     width: 600px;
-    /* min-height: 10px;
-    max-height: 1000px;
-    overflow-y: scroll; */
     margin-top: 10px;
     margin-left: 30px;
     padding: 5px;
@@ -199,7 +192,6 @@
 .heart
 {
     margin-left: 700px;
-    /* padding: 100px; */
 }
 .AA
 {
