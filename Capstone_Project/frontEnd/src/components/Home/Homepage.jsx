@@ -1,65 +1,14 @@
-import React, { useState } from "react"
 import './Homepage.css';
 import {Link} from "react-router-dom";
 
 function DisplayHome()
 {
-    const [course,setCourse]=useState([]);
-    const [isClick, setIsClick] = useState(false);
-    const [subunits,setSubunits] = useState([]);
-    const [isClicked,setIsClicked] = useState([]);
-    const [units,setUnits] = useState([]);
-    const [isClickMe,setIsClickMe] = useState([]);
-
-    function click()
-    {
-        setIsClick(!isClick);
-        // eslint-disable-next-line no-lone-blocks
-        {
-            if(isClick)
-            {
-                fetch(`http://localhost:5000/course`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data)
-                    setCourse(data)
-                })
-            }
-        }
-    }
-    function clickMe()
-    {
-        setIsClickMe(!isClickMe)
-        // eslint-disable-next-line no-lone-blocks
-        {
-            if(isClickMe)
-            {
-                fetch(`http://localhost:5000/units`)
-                .then(response=>response.json())
-                .then(data =>{
-                    console.log(data);
-                    setUnits(data)
-                })
-            }
-        }
-    }
-    function ClickMeOnce() {
-        setIsClicked(!isClicked);
-        if(isClicked){
-            fetch(`http://localhost:5000/Subunits`)
-                .then(response => response.json())
-                .then(subunitdata => {
-                    console.log(subunitdata)
-                    setSubunits(subunitdata)
-                })
-        }
-    }
     return(<>
         <div className="totalPage">
             <div className="nav">
                <Link to="/welcome"><img src="/resources/jtd.jpeg" alt="LogoJTD" className="logo" /></Link> 
-               <img src="/resources/booklive.jpeg" alt="livebook" className="LogoLive livebook" />
-                <img src="/resources/booklogo.jpeg" alt="livebook" className="livebook" onClick={()=>click()}/>
+               <img src="/resources/booklive.jpeg" alt="livebook" className="livebook" />
+                <img src="/resources/booklogo.jpeg" alt="livebook" className="livebook" />
                 <Link to="/profile"><img src="/resources/profile.webp" alt="Profile" className="profile"/></Link>
             </div>
             <div className="container">
@@ -72,67 +21,22 @@ function DisplayHome()
                             <img src="/resources/herokalvium.svg" alt="LivebookHeroImg" />
                         </div>
                 </div>
-                start?{
                     <div className="containerStore">
-                    <div className="containerData">
-                            <div className="center">
-                                    {
-                                        isClick ? 
-                                        course.map(({ course_Name }) => 
-                                        <div className="leftborder">
-                                                <h3 className='course' onClick={()=>clickMe()}>
-                                                    {course_Name}
-                                                </h3>
-                                        </div>)
-                                        :""
-                                    }
-                            </div>
-                    <div className="unitshow">
-                        {
-                        isClickMe?
-                        units.map(({ unit_Name}) =>
-                                <div className="unitmargin">
-                                    <div className='units'  onClick={()=>ClickMeOnce()}>
-                                        <div className="rambus">
-                                            <img src="/resources/Rhombus.png" alt="" className="a" />
-                                        </div>
-                                        <div className="text">
-                                            <div className="c" >
-                                                {unit_Name}
-                                                {
-                                                isClicked ? 
-                                                    <div>
-                                                        {
-                                                            subunits.map(({ subUnit_Name,subUnit_Content}) => <div>
-                                                                <div className='subunits' >
-                                                                    <div className="circle" ></div>
-                                                                    <p>
-                                                                        {subUnit_Name}
-                                                                    </p>
-                                                                </div>
-                                                                <p className="content">{subUnit_Content}  </p> 
-                                                                
-                                                            </div>) 
-                                                        }
-                                                    </div> : ""
-                                                }
-                                            </div>
-                                        </div>
-                                        <div className="dropdown">
-                                            <img src="/resources/downarrow.png" alt="" className="b" />
-                                        </div>
-                                    </div>
-                                </div>)
-                        :<><img src="/resources/miccymouse.svg" alt="mouse" className="mouse"/><h1 className="mouse1">WELCOME</h1></>
-                        }
-                    </div>
-                    </div>
+                        <div className='subjects'>
+                            <div>Mathematics</div>
+                            <div>Importance of Mathematics</div>
+                            <div>Milestones in Mathematics</div>
+                            <div>Mathematical Universality</div>
+                            <div>Mathematics Gamification</div>
+                            <div>Mathematical Problem-Solving</div>
+                        </div>
+                        <div>
+                            <img src="/resources/miccymouse.svg" alt="mouse" className="mouse"/><h1 className="mouse1">WELCOME</h1>
+                        </div> 
                 </div>
-                }:<><img src="/resources/miccymouse.svg" alt="mouse" className="mouse"/><h1 className="mouse1">WELCOME</h1></>
                 <div className="footer">
                     <div className="heart">Made For<img src="https://kalvium.community/images/heart_icon.svg" alt="heart" />STUDENTS</div>
                 </div>
-                
             </div>
         </div>
     </>)
