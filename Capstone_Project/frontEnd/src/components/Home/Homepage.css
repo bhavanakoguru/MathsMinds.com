@@ -1,0 +1,110 @@
+.totalPage
+{
+    display: flex;
+}
+/*NAV*/
+.nav
+{
+    width:80px;
+    height: 1100px;
+    border-right:1px solid black;
+    position: fixed;
+ }
+ .logo
+ {
+     margin-top: 20px;
+     width: 80px;
+     height: 80px;
+     border-radius: 50px 50px 20px 20px;
+ }
+ .livebook
+ {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 50px 50px 20px 20px;
+ }
+ .profile
+ {
+    width: 80px;
+    height: 80px;
+    margin-top: 350px;
+    border-radius: 50%;
+ }
+/*BanerPage*/
+ .container
+ {
+    width: 100%;
+ }
+ .introduction
+ {
+    border: 1px solid black;
+    margin-left: 80px;
+    height: 200px; 
+    padding: 5px;
+    display: flex;
+    background-color: rgb(76, 76, 196);
+ }
+ .liveHeros
+ {
+   margin-left: 300px;
+ }
+ .textmove
+ {
+   margin-top: 20px;
+   margin-left: 20px;
+ }
+.maths
+{
+   font-size: 20px;
+   color: rgb(220, 213, 213);
+}
+.mouse
+{
+   display: block;
+   margin-left: 400px;
+   margin-right: auto;
+   margin-top: 150px;
+}
+.mouse1
+{
+   display: block;
+   margin-left: 410px;
+   margin-right: auto;
+}
+.containerStore
+{
+   width: 100%;
+   display: flex;
+}
+
+.footer
+{
+    background-color: rgb(95, 143, 174);
+    border: 1px solid black;
+    padding-top:50px ;
+    padding-bottom: 100px;
+}
+.heart
+{
+    margin-left: 700px;
+}
+.subjects
+{
+    margin-left: 120px;
+    border-right: 1px solid black;
+    padding-right: 50px;
+    /* margin-bottom: 10px; */
+}
+.subjects>div
+{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border: 1px solid black;
+    padding: 8px;
+    padding: 10px 25px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
