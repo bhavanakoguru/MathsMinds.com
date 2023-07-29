@@ -19,7 +19,10 @@ useEffect(()=>{
 
   function handleSubjectClick(subject) {
     setClickedSubject(subject);
+    setClick(!false);
   }
+
+  const [click,setClick]=useState(false);
   
     return(<>
         <div className="totalPage">
@@ -61,14 +64,16 @@ useEffect(()=>{
                              <div style={{paddingTop:'10px',marginLeft:'880px',marginBottom:'10px',border:'1px solid black'}} className='searchBox'>
                                 <img src='https://www.clker.com/cliparts/g/Y/P/o/h/U/search-logo.svg' alt='search' className='search'/>
                                 <input placeholder="Search Here" onChange={(e)=>{setSearch(e.target.value)}} style={{padding:'10px',border:'none',outline:'none'}} />
-                            </div>
+                             </div>
                              {  
+
                                 clickedSubject === 'Mathematics' ? (unitData.filter((item)=>{
                                     if(item.unit_Name.toLowerCase().includes(search.toLocaleLowerCase())){
                                         return item;
                                     }
 
                                 }).map(({ unit_Name }) => (
+                                    
                                     <div className='units'>
                                             <div className="rambus">
                                                 <img src="/resources/Rhombus.png" alt="" className="rambusimg" />
